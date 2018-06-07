@@ -1,0 +1,42 @@
+body {
+  background-color:#000;
+  background-image:url(./images/login-newbg.pug);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+}
+
+a {
+  padding: 5px;
+  border-radius: 10px;
+  background: #dddddd;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.block {
+  color: #111111;
+  margin: 5px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 7px rgba(0,0,0,.2);
+}
+
+.name {
+  padding: 10px;
+  border-radius: 10px 0px 0px 0px;
+  font-weight: bold;
+  background: #2288cc;
+  color: white;
+}
+
+.msg {
+  padding: 10px;
+  background: white;
+  border-radius: 0px 0px 10px 0px;
+}
+
+h1 {
+  background-color:#FF0000; 
+}
