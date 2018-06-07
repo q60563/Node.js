@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>Page Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</header>
+<body>
+
+<form>
+  <button onclick="myFunction()">登出</button>
+  </form>
+  <script>
+    function myFunction(){
+      // var token = window.localStorage.getItem('token');
+      var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRidGVzdEBnbWFpbC5jb20iLCJ0aW1lc3RhbXAiOjE0ODIyMTQyMjgsImlhdCI6MTQ4MjIxNDIyOH0.5kPuk4Ufln8BXW9VobJyUslAuxm8bnuUkeNW7qBBatY';
+      $.ajax({
+        url: "http://10.21.20.36/8000/auth/logout",
+        dataType: 'jsonp',
+        success: function(data, status) {
+        return console.log("The returned data", token);
+      },
+      beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
+      });
+        // $.ajax({
+        //     method : 'POST',
+        //     dataType: 'json',
+        //     url : "http://10.21.20.36:8000/auth/logout",
+        //     // headers : {
+        //     //     Authorization : 'Bearer ' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE0ODIxMjYwOTN9.RhO7uBXd0xHnyZ5lSflraw0c8FbKgdNEJYG8Idu71HA',
+        //     // },
+        //     beforeSend: function(xhr){
+        //       xhr.setRequestHeader('Authorization', 'Bearer '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE0ODIxMjYwOTN9.RhO7uBXd0xHnyZ5lSflraw0c8FbKgdNEJYG8Idu71HA');
+        //       //xhr.setRequestHeader('Access-Control-Allow-origin', '*');
+        //     },
+        //     contentType : 'application/json',
+        //     data : {},
+        //     success : function(response) {
+        //         console.log(response);
+        //     },
+        //     error : function(xhr, status, error) {
+        //         var err = eval("(" + xhr.responseText + ")");
+        //         console.log(err);                   
+        //     }
+        // }); 
+    } 
+  </script>
+
+</body>
+</html>

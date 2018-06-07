@@ -1,0 +1,14 @@
+{
+  "name": "nuancetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cwLin",
+  "license": "MIT",
+  "dependencies": {
+    "nuance": "^1.1.0"
+  }
+}
